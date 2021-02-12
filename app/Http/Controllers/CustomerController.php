@@ -92,20 +92,4 @@ class CustomerController extends Controller
             'message' => 'Customer updated successfully'
         ], Response::HTTP_OK);
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        Customer::destroy($id);
-
-        return response()->json([
-            'res' => true,
-            'message' => 'Customer deleted successfully'
-        ], Response::HTTP_OK);
-    }
 }
