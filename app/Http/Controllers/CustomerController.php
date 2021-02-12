@@ -19,7 +19,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $response = Customer::all();
+        $response = Customer::paginate(10);
 
         return $response;
     }
